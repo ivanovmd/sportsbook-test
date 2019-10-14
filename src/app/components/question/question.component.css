@@ -1,0 +1,16 @@
+.question {
+    border: 4px solid #eee;
+    padding: 10px;
+}
+
+.question--correct {
+    border-color: green;
+}
+
+.question--incorrect {
+    border-color: red;
+}
+
+.option {
+    width: 100%;
+}

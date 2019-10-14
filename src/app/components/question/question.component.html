@@ -1,0 +1,11 @@
+<div class="question" [ngClass]="{'question--correct': isCorrect === true, 'question--incorrect': isCorrect === false}">
+    <h5>{{category}}</h5>
+    <h4 [innerHtml]="question"></h4>
+    
+    <select [disabled]="answered" class="option" name="answer" [(ngModel)]="answer" (change)="onAswerSelect()">
+        <option disabled selected>Select Your Answer</option>
+        <option *ngFor="let option of options" [value]="option" [innerHtml]="option"></option>
+    </select>
+
+    <p *ngIf="answered && isCorrect === false">Correct answer: {{correct}}</p>
+</div>
